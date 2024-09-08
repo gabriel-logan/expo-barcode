@@ -1,6 +1,6 @@
-import * as React from 'react';
+import * as React from "react";
 
-import { ExpoBarcodeViewProps } from './ExpoBarcode.types';
+import { ExpoBarcodeViewProps } from "./ExpoBarcode.types";
 
 export default function ExpoBarcodeView(props: ExpoBarcodeViewProps) {
   return (
