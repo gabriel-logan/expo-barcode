@@ -1,6 +1,6 @@
 {
   "name": "expo-barcode",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "description": "Library to generate barcodes and qr codes natively using Kotlin and Swift, integrated with expo.",
   "main": "build/index.js",
   "types": "build/index.d.ts",
