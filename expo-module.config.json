@@ -1,0 +1,9 @@
+{
+  "platforms": ["ios", "tvos", "android", "web"],
+  "ios": {
+    "modules": ["ExpoBarcodeModule"]
+  },
+  "android": {
+    "modules": ["expo.modules.barcode.ExpoBarcodeModule"]
+  }
+}
