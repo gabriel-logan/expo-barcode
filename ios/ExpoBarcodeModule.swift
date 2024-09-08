@@ -16,6 +16,14 @@ public class ExpoBarcodeModule: Module {
     Function("getTheme") { () -> String in
       UserDefaults.standard.string(forKey: "theme") ?? "system"
     }
+
+    Function("generateQRCode") { (data: String) -> String in
+      return "data:image/png;base64,QR_CODE"
+    }
+
+    Function("generateBarCode") { (data: String) -> String in
+      return "data:image/png;base64,BAR_CODE"
+    }
   }
 
   enum Theme: String, Enumerable {
