@@ -1,6 +1,6 @@
 {
   "name": "expo-barcode",
-  "version": "0.1.0",
+  "version": "0.0.1",
   "description": "Library to generate barcodes and qr codes natively using Kotlin and Swift, integrated with expo.",
   "main": "build/index.js",
   "types": "build/index.d.ts",
@@ -32,7 +32,8 @@
   "devDependencies": {
     "@types/react": "^18.0.25",
     "expo-module-scripts": "^3.5.2",
-    "expo-modules-core": "^1.12.20"
+    "expo-modules-core": "^1.12.20",
+    "react-native": "0.74.5"
   },
   "peerDependencies": {
     "expo": "*",
