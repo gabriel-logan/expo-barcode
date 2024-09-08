@@ -19,7 +19,14 @@
     "react-native",
     "expo",
     "expo-barcode",
-    "ExpoBarcode"
+    "ExpoBarcode",
+    "ios",
+    "android",
+    "barcode",
+    "qr-code",
+    "barcode-generator",
+    "qr-code-generator",
+    "mobile-native-barcode-generator"
   ],
   "repository": "https://github.com/gabriel-logan/expo-barcode",
   "bugs": {
