@@ -12,7 +12,7 @@ export default function App() {
       <Text>Result: </Text>
       {barcodeValue &&
         (toggleGenCode === "QR" ? (
-          <QRCodeView value={barcodeValue} width={250} height={250} />
+          <QRCodeView value={barcodeValue} width={350} height={350} />
         ) : (
           <BarcodeView value={barcodeValue} width={300} height={100} />
         ))}

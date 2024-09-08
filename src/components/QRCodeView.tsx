@@ -1,0 +1,55 @@
+import { useEffect, useState } from "react";
+import { Image } from "react-native";
+
+import { generateQRCode } from "../methods/generateQRCode";
+
+interface QRCodeViewProps {
+  value: string;
+  width: number;
+  height: number;
+}
+
+export function QRCodeView({ value, width, height }: QRCodeViewProps) {
+  const [barcode, setBarcode] = useState<string | undefined>("");
+
+  if (value === "") {
+    throw new Error("Value cannot be empty");
+  }
+
+  if (width <= 0 || typeof width !== "number") {
+    throw new Error("Width must be a positive number");
+  }
+
+  if (height <= 0 || typeof height !== "number") {
+    throw new Error("Height must be a positive number");
+  }
+
+  useEffect(() => {
+    async function waitFor() {
+      const qrCodeGeneradet = await generateQRCode(value, width, height);
+
+      setBarcode(qrCodeGeneradet);
+    }
+
+    waitFor();
+
+    return () => {
+      setBarcode("");
+    };
+  }, [height, value, width]);
+
+  return (
+    <>
+      {barcode && (
+        <Image
+          testID="qr-code"
+          source={{ uri: barcode }}
+          style={{
+            width,
+            height,
+          }}
+        />
+      )}
+    </>
+  );
+}
